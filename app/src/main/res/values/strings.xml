@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">DeliverytekaCourier</string>
+    <string name="map_key" translatable="false">AIzaSyAdewB4fv5q6rQmngsCs_mjnnvk1yGfKus</string>
+
+    <string name="login">Войти</string>
+    <string name="enter_your_phone">Введите номер телефона</string>
+    <string name="enter_your_password">Введите пароль</string>
+    <string name="shift">главное меню</string>
+    <string name="Order">Заказы</string>
+    <string name="history">История</string>
+    <string name="profile">Профиль</string>
+    <string name="instruction">Инструкция</string>
+    <string name="enter_number_phone_correctly">Введите правильно номер телефона!</string>
+    <string name="not_all_fields_filled">Вы ввели данные не во все поля!</string>
+    <string name="hello_blank_fragment">Привет фрагмент</string>
+    <string name="official_website">Оффициальный сайт</string>
+    <string name="gleb_komarov_vk">Глеб Комаров(Вконтакте)</string>
+    <string name="roman_lyschyk_vk">Лыщик Роман(Вконтакте)</string>
+    <string name="about_service">О сервисе</string>
+    <string name="your_name">Ваше имя не указано</string>
+    <string name="your_number_phone">Ваш номер телефона*</string>
+    <string name="sign_out">Выйти</string>
+    <string name="select_products_from_the_catalog_and_place_an_order">Выберите товары из каталога и сделайте заказ</string>
+    <string name="return_home">Вернуться в меню</string>
+    <string name="no_order">Нет заказов</string>
+
+    <string name="shift_description">Минимальное время смены - 4 часа,
+        \nМаксимальное время смены - 8 часов.
+        \nРабочий день начинается с 8:00 утра до 22:00 вечера.\nМаксимальное время смены уменьшается в зависимости от времени, оставшегося до конца рабочего дня.</string>
+    <string name="shift_troubles">В случае каких-либо непредвиденных обстоятельств, форс-мажора и т.д.
+        Вы в главном меню приложение можете сделать звонок администратору, который может закончить Вашу смену.</string>
+
+</resources>

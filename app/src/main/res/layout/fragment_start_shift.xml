@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_margin_small"
+    tools:context=".fragments.shift.StartShiftFragment">
+
+    <LinearLayout
+        android:id="@+id/description_shift_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_margin_xlarge"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Время смены"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xlarge"
+            app:layout_constraintEnd_toStartOf="@+id/btn_change_profile"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shift_description"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintEnd_toStartOf="@+id/btn_change_profile"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/padding_margin_xlarge"
+            android:text="Непредвиденные обстоятельства"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xlarge"
+            app:layout_constraintEnd_toStartOf="@+id/btn_change_profile"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shift_troubles"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintEnd_toStartOf="@+id/btn_change_profile"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/select_time_shift_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_margin_xlarge"
+        android:layout_marginTop="@dimen/padding_margin_xlarge"
+        android:layout_marginEnd="@dimen/padding_margin_xlarge"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_shift_layout"
+        tools:visibility="visible">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/accept_shift"
+            android:layout_width="184dp"
+            android:layout_height="@dimen/auth_button_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding_margin_xlarge"
+            android:layout_marginBottom="@dimen/padding_margin_xlarge"
+            android:backgroundTint="@color/white"
+            android:elevation="@dimen/padding_margin_xlarge"
+            android:text="Начать смену"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintEnd_toStartOf="@+id/directions_user_btn"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password_input_layout" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Минимальное время работы - 4 часа"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintEnd_toStartOf="@+id/btn_change_profile"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selected_shift_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_margin_xlarge"
+        android:layout_marginTop="@dimen/padding_margin_xlarge"
+        android:layout_marginEnd="@dimen/padding_margin_xlarge"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_shift_layout">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_time_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_margin_xlarge"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Вы работаете с 8:00 до 14:00"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintEnd_toStartOf="@+id/btn_change_profile"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_cant_start_shift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_margin_xlarge"
+        android:layout_marginTop="@dimen/padding_margin_xlarge"
+        android:layout_marginEnd="@dimen/padding_margin_xlarge"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_shift_layout">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_margin_xxlarge"
+            android:ellipsize="end"
+            android:text="В данный момент вы не можете выйти на смену"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintEnd_toStartOf="@+id/btn_change_profile"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

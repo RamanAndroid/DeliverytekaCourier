@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="order"
+            type="com.example.deliverytekacourier.data.models.OrdersItem" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.order.FragmentOrderDetail">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/order_total_sum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_margin_xlarge"
+                android:layout_marginTop="@dimen/padding_margin_xlarge"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Сумма:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/order_total_sum_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_margin_xlarge"
+                android:layout_marginEnd="16dp"
+                android:text="@{order.order_total}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_total_sum" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/order_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_margin_xlarge"
+                android:layout_marginTop="@dimen/padding_margin_xlarge"
+                android:layout_marginEnd="40dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Адрес доставки:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_total_sum_text" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/order_address_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_margin_xlarge"
+                android:layout_marginEnd="16dp"
+                android:text="@{order.user_address}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_address" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/order_client"
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_margin_xlarge"
+                android:layout_marginTop="@dimen/padding_margin_xlarge"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Данные клиента:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_address_text" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/order_client_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_margin_xlarge"
+                android:layout_marginEnd="16dp"
+                android:text='@{order.user_name + "," + order.user_phone}'
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_client" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/order_comment"
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_margin_xlarge"
+                android:layout_marginTop="@dimen/padding_margin_xlarge"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Комментарий:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_client_text" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/order_comment_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_margin_xlarge"
+                android:layout_marginEnd="16dp"
+                android:text="@{order.user_comment}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_comment" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/call_user_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/auth_button_height"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/padding_margin_xlarge"
+                android:backgroundTint="@color/white"
+                android:elevation="16dp"
+                android:text="Позвонить"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toStartOf="@+id/directions_user_btn"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/order_comment_text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/directions_user_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/auth_button_height"
+                android:layout_marginStart="@dimen/padding_margin_xlarge"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/white"
+                android:elevation="16dp"
+                android:text="Маршрут"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/call_user_btn"
+                app:layout_constraintTop_toTopOf="@id/call_user_btn" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/show_order_content_btn"
+                style="@style/LongButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/auth_button_height"
+                android:layout_marginTop="16dp"
+                android:text="Содержимое заказа:"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/call_user_btn"
+                app:strokeColor="@color/light_gray"
+                app:strokeWidth="2dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_orders_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/show_order_content_btn"
+                tools:listitem="@layout/item_medicine" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/accept_order_btn"
+                style="@style/LoginTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/auth_button_height"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_orders_list" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

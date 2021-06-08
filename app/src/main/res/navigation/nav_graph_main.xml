@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/startShiftFragment">
+
+    <fragment
+        android:id="@+id/startShiftFragment"
+        android:name="com.example.deliverytekacourier.fragments.shift.StartShiftFragment"
+        android:label="Главное меню"
+        tools:layout="@layout/fragment_start_shift" />
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.example.deliverytekacourier.fragments.order.OrdersFragment"
+        android:label="Заказы"
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/action_ordersFragment_to_fragmentOrderDetail"
+            app:destination="@id/fragmentOrderDetail"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_ordersFragment_to_startShiftFragment"
+            app:destination="@id/startShiftFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.deliverytekacourier.fragments.history.HistoryFragment"
+        android:label="История"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.deliverytekacourier.fragments.profile.ProfileFragment"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.example.deliverytekacourier.fragments.instruction.InstructionFragment"
+        android:label="Инструкция"
+        tools:layout="@layout/fragment_instruction" />
+    <fragment
+        android:id="@+id/aboutServiceFragment"
+        android:name="com.example.deliverytekacourier.fragments.service.AboutServiceFragment"
+        android:label="О сервисе"
+        tools:layout="@layout/fragment_about_service" />
+    <fragment
+        android:id="@+id/fragmentOrderDetail"
+        android:name="com.example.deliverytekacourier.fragments.order.FragmentOrderDetail"
+        android:label="Заказ №{id} от: {time}"
+        tools:layout="@layout/fragment_order_detail" >
+        <action
+            android:id="@+id/action_fragmentOrderDetail_to_ordersFragment"
+            app:destination="@id/ordersFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <argument
+            android:name="order"
+            app:argType="com.example.deliverytekacourier.data.models.OrdersItem" />
+        <argument
+            android:name="time"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+</navigation>

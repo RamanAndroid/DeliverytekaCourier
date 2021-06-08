@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/startShiftFragment"
+            android:icon="@drawable/ic_house"
+            android:title="@string/shift" />
+        <item
+            android:id="@+id/ordersFragment"
+            android:icon="@drawable/ic_order"
+            android:title="@string/Order" />
+        <item
+            android:id="@+id/historyFragment"
+            android:icon="@drawable/ic_history"
+            android:title="@string/history" />
+        <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/instructionFragment"
+            android:icon="@drawable/ic_instruction"
+            android:title="@string/instruction" />
+        <item
+            android:id="@+id/aboutServiceFragment"
+            android:icon="@drawable/ic_about_service"
+            android:title="@string/about_service" />
+    </group>
+</menu>
